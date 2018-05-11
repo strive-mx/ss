@@ -8,17 +8,17 @@
 		<title>STRIVE</title>
 
 		<!-- Bootstrap CSS -->
-		<<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-		<link rel="stylesheet" href="custom-style.css">
+		<link rel="stylesheet" href="styles/custom.css">
 
 	</head>
 	<body>
 
 		<!-- NAV BEGIN -->
-		<nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<div class="container">
 
 				<a class="navbar-brand" href="#">STRIVE</a>
@@ -29,11 +29,11 @@
 			    	<div class="navbar-nav">
 			    		<a class="nav-item nav-link active" href="#">
 			    		INICIO<span class="sr-only">(current)</span></a>
-			      		<a class="nav-item nav-link" href="#">
+			      		<a class="nav-item nav-link disabled" href="#">
 			      		CONOCENOS</a>
-			      		<a class="nav-item nav-link" href="#">
+			      		<a class="nav-item nav-link disabled" href="#">
 			      		PARTICIPA</a>
-			      		<a class="nav-item nav-link" href="#">
+			      		<a class="nav-item nav-link disabled" href="#">
 			      		SOCIAL</a>
 			    	</div>
 			  	</div>
@@ -42,8 +42,38 @@
 		</nav>
 		<!-- NAV END -->
 
+
+
 		<!-- ABOVE THE FOLD BEGIN -->
+
+		<!-- <div style="position: absolute; height: 100%; width: 100%;">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMin">
+				<polygon points="0,0 50,25 100,0" style="fill:#00304b">
+			</svg>
+		</div>
+
+		<div style="position: absolute; height: 100%; width: 100%;">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMax">
+				<polygon points="0,100 50,75 100,100" style="fill:#00304b">
+			</svg>
+		</div> -->
+
+		<div class="background-triangle">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMinYMid">
+				<polygon id="triangle" points="0,0 25,50 0,100" style="fill:#00304b">
+			</svg>
+		</div>
+
+		<div class="background-triangle" style="right: 0;">
+			<svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMaxYMid">
+				<polygon id="triangle" points="100,0 75,50 100,100" style="fill:#00304b">
+			</svg>
+		</div>
+
+
 		<section id="above-the-fold" class="d-flex justify-content-center">
+
+			
 			<div class="row align-items-center">
 
 				<div class="col-2"></div>
@@ -52,15 +82,15 @@
 						<h1>TU SERVICIO SOCIAL <span class="highlight">SIN ROLLOS</span></h1>
 						<p><a href="">#unITSXdigno</a></p>
 
-						<a class="shadow btn btn-primary" href="">Empezar ></a>
+						<a id="cta" class="btn btn-primary shadow" href="">Me interesa</a>
 					</div>	
 				</div>
 
 				<!-- Scroll down indicator BEGIN -->
 				<div class="container text-center scroll-down-indicator">
-					<p class="lead">CONOCE EL PROCESO</p>
+					<p class="lead">CONOCE MÁS</p>
 					<div class="">
-						<img src="down-arrow.svg" width="50px">
+						<img src="images/down-arrow-icon.svg" width="50px">
 					</div>
 				</div>
 				<!-- Scroll down indicator END -->
@@ -128,7 +158,7 @@
 						
 						<div class="container mx-auto">
 							<div class="col-sm border-bottom">
-								<img class="img-fluid" src="format-fill-icon.png" width="100px">
+								<img class="img-fluid" src="images/online-internet-globe.svg" width="100px">
 								<p>
 									<h4>LLENA EL FORMATO EN LINEA</h4>
 									Preocupate por solo los datos que necesitas proporcionar.
@@ -136,14 +166,14 @@
 							</div>
 
 							<div class="col-sm border-bottom">
-								<img class="img-fluid" src="send-arrow-icon.png" width="100px">
+								<img class="img-fluid" src="images/send-envelop-letter.svg" width="100px">
 								<p>
 									<h4>ENVIALO PARA REVISION</h4>
 									Espera y enterate cuando revisen la informacion de tu formato.
 								</p>
 							</div>
 							<div class="col-sm">
-								<img class="img-fluid" src="print-printer-icon.png" width="100px">
+								<img class="img-fluid" src="images/print-approved-paper.svg" width="100px">
 								<p>
 									<h4>IMPRIME Y SELLA</h4>
 									Una vez aprovado pasa a que solo te sellen tu documento impreso.
@@ -171,15 +201,17 @@
 				<div class="container col-12">
 					<div class="row text-center">
 						<div class="col-sm">
-
+							<img class="img-fluid" src="images/test.svg" width="100px">
 							<h4>REVISA Y ASESORA</h4>
 							<p>Recibe y anota correcciones en linea de los <br>  formatos de manera rapida</p>
 						</div>
 						<div class="col-sm">
+							<img class="img-fluid" src="images/test.svg" width="100px">
 							<h4>ORGANIZA</h4>
 							<p>Organiza y busca folios de la manera que quieras</p>
 						</div>
 						<div class="col-sm">
+							<img class="img-fluid" src="images/test.svg" width="100px">
 							<h4>SELLA Y LIBERA</h4>
 							<p>Recibe solo documentos listos para sellar</p>
 						</div>
@@ -201,34 +233,33 @@
 					<h1 class="">POR UNA MEJOR EXPERIENCIA</h1>
 				</div>
 
-			</div>
+			</div> 
 
 		</section>
 
 
 		<footer>
 
-			<div class="container text-center p-5">
-				<div class="row">
+			<div class="container p-5">
+				<div class="row mt-3">
 
-					<div class="col-4">
-						<h5>CONOCENOS</h5>
+					<div class="col-sm">
+						<h5 class="text-center">SOCIAL</h5>
 					</div>
 
-					<div class="col-4">
-						<h5>PARTICIPA</h5>
+					<div class="col-sm">
+						<h5 class="text-center">PARTICIPA</h5>
 					</div>
 
-					<div class="col-4">
-						<h5>SOCIAL</h5>
+					<div class="col-sm">
+						<h5 class="text-center">CONOCENOS</h5>
+						<p>Somos un grupo de estudiantes que como tu queremos un cambio </p>
 					</div>
+
 				</div>
-
 			</div>
-			
+
 		</footer>
-
-
 
 
 
